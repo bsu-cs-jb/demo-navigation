@@ -15,7 +15,7 @@ import {
 } from "react-native";
 import styles from "./styles";
 
-const RENDER_HIGHLIGHT = true;
+const RENDER_HIGHLIGHT = false;
 
 interface CustomStyleTextProps extends TextProps {
   customStyle?: StyleProp<TextStyle>;
