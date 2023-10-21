@@ -11,10 +11,7 @@ type WatchlistViewProps = StackScreenProps<
   StackNavParamList,
   "Watchlist"
 >;
-export function WatchlistView({
-  navigation,
-  route,
-}: WatchlistViewProps) {
+export function WatchlistView({ route }: WatchlistViewProps) {
   const { watchlistList } = useWatchlistContext();
   const { watchlistId } = route.params;
   log(`WatchlistView(): ${watchlistId}`);

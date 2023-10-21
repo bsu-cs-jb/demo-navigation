@@ -32,12 +32,6 @@ const sharedStyles = StyleSheet.create({
   flexFill: {
     flex: 1,
   },
-  input: {
-    fontSize: 18,
-    flex: 1,
-    borderWidth: 1,
-    padding: 7,
-  },
   scrollContainer: {
     flex: 1,
     alignSelf: "flex-start",
@@ -58,13 +52,15 @@ const sharedStyles = StyleSheet.create({
   },
   horzContainer: {
     flexDirection: "row",
+    width: "100%",
     gap: 10,
   },
-  topLevelContainer: {
+  screenContainer: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingTop: 60,
     paddingBottom: 20,
+    paddingHorizontal: 10,
+    alignItems: "center",
   },
   avoidingView: {
     flex: 1,
@@ -90,9 +86,36 @@ const sharedStyles = StyleSheet.create({
   formRow: {
     width: "100%",
     flexDirection: "row",
+    alignItems: "flex-end",
+    // height: 40,
   },
   formColumn: {
-    flex: 0.5,
+    flex: 1,
+    alignItems: "flex-start",
+    justifyContent: "center",
+  },
+  input: {
+    fontSize: 18,
+    borderWidth: 1,
+    padding: 7,
+    width: "100%",
+  },
+  modalTop: {
+    flex: 1,
+    justifyContent: "center",
+    // paddingHorizontal: 20,
+    // padding: 20,
+    backgroundColor: "#ddd",
+  },
+  modalContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "pink",
+    gap: 15,
+    margin: 20,
+    paddingVertical: 40,
+    paddingHorizontal: 20,
+    borderRadius: 20,
   },
 });
 

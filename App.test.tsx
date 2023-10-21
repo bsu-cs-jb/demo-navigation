@@ -17,12 +17,14 @@ describe("<App/>", () => {
   it("compiles and has children", () => {
     const tree = renderer.toJSON();
     jest.runOnlyPendingTimers();
-    if (Array.isArray(tree)) {
-      expect(Array.isArray(tree)).toBeFalsy();
-      // This return is to help TypeScript determine that
-      // tree cannot be an Array
-      return;
+    expect(tree).toBeDefined();
+    expect(tree).not.toBeNull();
+    expect(Array.isArray(tree)).toBeFalsy();
+    if (tree === null || tree === undefined || Array.isArray(tree)) {
+      throw new Error("tree was not defined or was an array");
     }
-    expect(tree?.children?.length).toBeGreaterThan(0);
+    expect(tree.children).toBeDefined();
+    expect(tree.children).not.toBeNull();
+    expect(tree.children?.length).toBeGreaterThan(0);
   });
 });

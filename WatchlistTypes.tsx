@@ -4,7 +4,7 @@ export interface Watchlist {
 }
 
 export type StackNavParamList = {
-  Watchlists: {};
+  Watchlists: never;
   Watchlist: {
     watchlistId: string;
   };
